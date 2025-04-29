@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>Formulário de Contato</title>
+    <h:outputStylesheet library="css" name="style.css"/>
+</h:head>
+<h:body>
+    <h:form styleClass="form-container">
+        <h2>Fale Conosco</h2>
+
+        <h:outputLabel for="nome" value="Nome:" />
+        <h:inputText id="nome" value="#{contatoBean.nome}" required="true" styleClass="input-field"/>
+
+        <h:outputLabel for="email" value="Email:" />
+        <h:inputText id="email" value="#{contatoBean.email}" required="true" styleClass="input-field"/>
+
+        <h:outputLabel for="assunto" value="Assunto:" />
+        <h:inputText id="assunto" value="#{contatoBean.assunto}" styleClass="input-field"/>
+
+        <h:outputLabel for="mensagem" value="Mensagem:" />
+        <h:inputTextarea id="mensagem" value="#{contatoBean.mensagem}" rows="5" cols="30" styleClass="textarea-field"/>
+
+        <h:commandButton value="Enviar" action="#{contatoBean.enviar}" styleClass="btn-enviar"/>
+    </h:form>
+</h:body>
+</html>
